@@ -4,7 +4,7 @@ Aplicación web hecha con **React (componentes funcionales + Hooks)** y **Vite**
 
 ## Funcionalidades
 
-- **6 equipos** con escudo propio (dibujado en SVG), nombre e id único.
+- **6 equipos** colombianos (Junior, Medellín, Nacional, Millonarios, América y Santa Fe) con su escudo, nombre e id único. Si una imagen no carga, se muestra un escudo SVG de respaldo.
 - **Registro de partidos**: equipo local, visitante y marcador, con validaciones:
   - No se puede elegir el mismo equipo en ambos lados.
   - Los marcadores deben ser números enteros mayores o iguales a 0.
@@ -55,23 +55,34 @@ npm -v
 
 ```
 panel-futbol/
+├── .gitignore
 ├── index.html
 ├── package.json
 ├── vite.config.js
+├── README.md
+├── EXPLICACION.md
+├── public/
+│   └── escudos/                 ← imágenes de los escudos (PNG/SVG)
+│       ├── junior.png
+│       ├── medellin.png
+│       ├── nacional.png
+│       ├── millonarios.png
+│       ├── america.png
+│       └── santafe.png
 └── src/
-    ├── main.jsx                  ← punto de entrada
-    ├── App.jsx                   ← estado principal y acciones
-    ├── index.css                 ← estilos
+    ├── main.jsx                 ← punto de entrada
+    ├── App.jsx                  ← estado principal y acciones
+    ├── index.css                ← estilos
     ├── data/
-    │   └── teams.js              ← equipos y partidos de ejemplo
+    │   └── teams.js             ← equipos y partidos de ejemplo
     ├── utils/
-    │   └── standings.js          ← cálculo de la tabla (reduce + sort)
+    │   └── standings.js         ← cálculo de la tabla (reduce + sort)
     └── components/
-        ├── Crest.jsx             ← escudo SVG
-        ├── TeamList.jsx          ← tarjetas de equipos
-        ├── MatchForm.jsx         ← formulario con validaciones
-        ├── StandingsTable.jsx    ← tabla de posiciones
-        └── MatchHistory.jsx      ← historial, filtro y eliminar
+        ├── Crest.jsx            ← escudo (imagen, con SVG de respaldo)
+        ├── TeamList.jsx         ← tarjetas de equipos
+        ├── MatchForm.jsx        ← formulario con validaciones
+        ├── StandingsTable.jsx   ← tabla de posiciones
+        └── MatchHistory.jsx     ← historial, filtro y eliminar
 ```
 
 ## Tecnologías
